@@ -220,3 +220,75 @@ h2 {
 }
 
 /* JURNDA */
+
+body {
+  width: 100%;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #282828;
+  height: 70px;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+}
+
+.guziki {
+  background-color: #282828;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+.guziki:hover {
+  background-color: #484848;
+}
+
+.logo {
+  font-size: 40px;
+  color: white;
+}
+.glowne {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 200px 200px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #282828;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.box {
+  background-color: red;
+  width: 20%;
+  text-align: center;
+}
+.stopka {
+  font-size: 20px;
+}
+.zdjecie {
+  width: 50px;
+  height: 50px;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
