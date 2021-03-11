@@ -1,4 +1,3 @@
-/* BARTKA */
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -14,321 +13,79 @@ img {
   height: 100%;
 }
 
-.tytuly {
-  margin: 50px;
-  font-size: 45px;
-  font-weight: 400;
-}
-.tytuly ::after {
-  border: #282828;
-}
-
 h2 {
   font-size: 35px;
   font-weight: 400;
   margin-bottom: 10px;
 }
 
-.navbar {
-  width: 100vw;
-  background-color: #282828;
-  height: 70px;
-}
-
-#onas {
-  width: 100vw;
-  height: 350px;
-  background-color: #282828;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.onasElement {
-  background-color: white;
-  margin: 20px;
-  height: 300px;
-  width: 350px;
-}
-
-.onasImage {
-  background-color: red;
-  margin-top: 10px;
-  margin-bottom: 15px;
-  margin-left: auto;
-  margin-right: auto;
-  height: 150px;
-  width: 150px;
-}
-
-.onasTytul {
-  font-size: 25px;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.onasOpis {
-  font-size: 18px;
-  text-align: center;
-}
-
-#galeria {
-  text-align: center;
-  padding: 45px;
-}
-
-.fotogaleria {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.foto {
-  width: 300px;
-  height: 300px;
-  background-color: blue;
-}
-
-#onass {
-  margin-top: 100px;
-  width: 100vw;
-  height: 500px;
-  display: grid;
-  grid-template-columns: 50% 50%;
-}
-
-.opis {
-  margin-top: 40px;
-  padding: 15px;
-  width: 1076px;
-  height: 300px;
-  background-color: white;
-  transform: translate(15%, 10%);
-  font-size: 18px;
-  -webkit-box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.58);
-  box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.58);
-}
-
-.foto1 {
-  background-image: url("podloga.jpg");
-  height: s;
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.coOferujemy {
-  margin-top: 100px;
-  width: 100vw;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  transform: translateY(100px);
-  transition: 0.8s linear;
-  opacity: 0;
-}
-
-.coOferujemy-animation {
-  opacity: 1;
-  transform: translateY(0px);
-}
-
-.oferta {
-  width: 30vw;
-  height: 40vw;
-  margin-top: 30px;
-}
-
-.ofertaImg {
-  background-color: coral;
-  width: 100%;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2%;
-}
-
-.ofertaOpis {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  color: white;
-}
-
-#conctact {
-  background-image: url("img/tlo2.png");
-  background-color: #282828;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  color: white;
-}
-
-.form {
-  margin: 100px;
-  background-color: #383838;
-  display: grid;
-  width: 50vw;
-  grid-template-columns: 40% 60%;
-  padding: 30px;
-  -webkit-box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.58);
-  box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.58);
-}
-
-.formForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.formForm h2 {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin: 40px;
-  font-size: 60px;
-}
-.formForm .inputText,
-textarea {
-  background-color: #595959;
-  border-bottom: 3px solid white;
-  height: 50px;
-  width: 70%;
-  font-size: 30px;
-  margin: 20px;
-  outline: none;
-  color: white;
-}
-
-textarea {
-  width: 70%;
-  height: 200px;
-}
-
-textarea:focus {
-  background-color: white;
-  color: #282828;
-}
-
-.formForm input:focus {
-  outline: none;
-  background-color: white;
-  color: #282828;
-}
-
-.formTel {
-  padding: 30px;
-  font-size: 35px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-}
-
-.telButton {
-  background-color: #00e0ff;
-  width: 150px;
-  height: 50px;
-  border: none;
-  color: white;
-  font-size: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
-}
-
-.telButton a {
-  color: white;
+a {
   text-decoration: none;
 }
 
-.wyslij {
-  width: 30%;
-  height: 40px;
-  color: #282828;
-  font-size: 30px;
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+.hamburger div {
+  width: 25px;
+  height: 5px;
   background-color: white;
+  margin: 5px;
 }
-
-/* JURNDA */
-
-body {
-  width: 100%;
-  margin: 0px;
-  box-sizing: border-box;
+.hamburger .line:nth-child(2) {
+  transition: background-color 0.3s 0.1s ease-in-out;
 }
-
-.navbar {
-  width: 100%;
-  background-color: #282828;
-  height: 70px;
-  justify-content: space-around;
-  display: flex;
-  flex-direction: row;
+.hamburger .line:nth-child(3) {
+  transition: transform 0.2s 0.2s ease-in-out;
 }
-.guziki {
-  background-color: #282828;
-  border: none;
-  color: white;
-  padding: 15px 20px;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin-right: 10px;
-  margin-top: 10px;
+.hamburger .line:nth-child(1) {
+  transition: transform 0.2s 0.2s ease-in-out;
 }
-.guziki:hover {
-  background-color: #484848;
+@media screen and (max-width: 768px) {
+  body {
+    /*overflow-x: hidden;*/
+  }
+  header ul {
+    position: absolute;
+    left: 0;
+    height: 100vh;
+    top: -1rem;
+    background-color: #00e0ff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  header ul li {
+    height: 100px;
+    /*opacity:0;*/
+  }
+  .hamburger {
+    display: block;
+  }
 }
-
-.logo {
-  font-size: 40px;
-  color: white;
+.nav-active {
+  transform: translateX(0%);
 }
-
-footer {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: #282828;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  text-align: center;
+.hamburger-active {
+  position: absolute;
+  right: 6.2rem;
 }
-.box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  width: 20%;
-  text-align: center;
+.hamburger-active .line:nth-child(2) {
+  background-color: transparent;
 }
-.stopka {
-  font-size: 20px;
+.hamburger-active .line:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
 }
-.zdjecie {
-  width: 50px;
-  height: 50px;
-  text-align: center;
+.hamburger-active .line:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
 }
-img {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-}
-.info {
-  text-align: left;
-}
-.zdj {
-  text-align: center;
-}
-.odsylacz {
-  text-align: right;
-}
-
-/* ARKA */
+/* NAVBAR */
 
 .mainPage {
   height: 91vh;
@@ -419,6 +176,7 @@ img {
   background-color: white;
 }
 
+/* HERO IMAGE */
 header {
   position: absolute;
   top: 0;
@@ -428,7 +186,6 @@ header {
   justify-content: space-between;
   align-items: center;
   transition: 0.6s;
-  padding: 40px 100px;
   z-index: 100000;
 }
 header .logo {
@@ -470,5 +227,274 @@ header ul li a {
 header .sticky ul li a {
   color: black;
 }
-header .logo {
+
+/* OFERTA */
+
+.oferty {
+  margin-top: 100px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  transform: translateY(100px);
+  transition: 0.8s linear;
+  opacity: 0;
+}
+
+.oferty-animation {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.oferta {
+  width: 400px;
+  height: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px;
+  font-size: 30px;
+  margin: 40px;
+  cursor: pointer;
+}
+
+.oferta img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tytulOferty {
+  position: absolute;
+  font-size: 40px;
+  transform: translateY(250px);
+  transition: 1s;
+}
+
+.tytulOferty-animation {
+  font-size: 40px;
+  transform: translateY(100px);
+}
+
+.opisOferty {
+  opacity: 0;
+  transition: 1s;
+  transform: translateY(200px);
+  text-align: center;
+}
+
+.opisOferty-animation {
+  opacity: 1;
+}
+
+/* O NAS */
+
+.oNas {
+  margin-top: 100px;
+  width: 100vw;
+  height: 500px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.opisONas {
+  margin-top: 40px;
+  padding: 15px;
+  width: 1076px;
+  height: 300px;
+  background-color: white;
+  transform: translate(15%, 10%);
+  font-size: 18px;
+  -webkit-box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.58);
+  box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.58);
+}
+
+.fotoONas {
+  background-image: url("podloga.jpg");
+  height: s;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* GALERIA */
+
+.galeria {
+  text-align: center;
+}
+
+.fotoGaleria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.foto {
+  width: 300px;
+  height: 300px;
+  background-color: blue;
+}
+
+/* FORMULARZ KONTAKTOWY */
+.conctact {
+  background-image: url("img/tlo2.png");
+  background-color: #282828;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.form {
+  margin: 100px;
+  background-color: #383838;
+  display: grid;
+  width: 50vw;
+  grid-template-columns: 40% 60%;
+  padding: 30px;
+  -webkit-box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.58);
+  box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.58);
+}
+
+.formForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formForm h2 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 40px;
+  font-size: 60px;
+}
+
+.formForm .inputText,
+textarea {
+  background-color: #595959;
+  border-bottom: 3px solid white;
+  height: 50px;
+  width: 70%;
+  font-size: 30px;
+  margin: 20px;
+  outline: none;
+  color: white;
+}
+
+textarea {
+  width: 70%;
+  height: 200px;
+}
+
+textarea:focus {
+  background-color: white;
+  color: #282828;
+}
+
+.formForm input:focus {
+  outline: none;
+  background-color: white;
+  color: #282828;
+}
+
+.formTel {
+  padding: 30px;
+  font-size: 35px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.telButton {
+  background-color: #00e0ff;
+  width: 150px;
+  height: 50px;
+  border: none;
+  color: white;
+  font-size: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+.telButton a {
+  color: white;
+  text-decoration: none;
+}
+
+.wyslij {
+  color: #fff;
+  width: 30%;
+  height: 40px;
+  color: #282828;
+  font-size: 30px;
+  border-bottom: #fff 2px solid;
+  position: relative;
+  background-color: #595959;
+}
+
+.wyslij::after {
+  content: "";
+  height: 3px;
+  width: 100%;
+  background: red;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+/* STOPKA */
+
+footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #282828;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  text-align: center;
+  -webkit-box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.58);
+  box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.58);
+}
+.footerBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 20%;
+  text-align: center;
+}
+.line {
+  align-items: center;
+  height: 100%;
+  border-left: 2px solid #444444;
+}
+.stopka {
+  color: #777777;
+  font-size: 12px;
+}
+.footerZdjecie {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+img {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.info {
+  text-align: left;
+}
+
+.odsylacz {
+  text-align: right;
+}
+
+.menu {
+  color: #777777;
+  font-size: 12px;
 }
