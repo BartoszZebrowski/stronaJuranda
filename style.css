@@ -318,18 +318,24 @@ header .sticky ul li a {
 .oNas {
   margin-top: 100px;
   width: 100vw;
-  height: 500px;
-  background-image: url(img/tlo2.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: -40px;
+  height: 60vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+
+  transform: translateY(100px);
+  transition: 0.8s linear;
+  opacity: 0;
+}
+.oNas-animation {
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 .opisONas {
   margin-top: 40px;
   padding: 15px;
-  width: 1076px;
-  height: 300px;
+  width: 70vw;
+  min-height: 30vh;
   background-color: white;
   transform: translate(15%, 10%);
   font-size: 18px;
@@ -338,12 +344,31 @@ header .sticky ul li a {
 }
 
 .fotoONas {
-  background-image: url("podloga.jpg");
+  background-image: url("img/miasto.jpg");
   height: s;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media screen and (max-width: 768px) {
+  .oNas {
+    width: 100vw;
+    display: flex;
+    background-image: url("img/miasto.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translate(0%);
+    justify-content: center;
+    align-items: center;
+  }
+  .fotoONas {
+    display: none;
+  }
+  .opisONas {
+    transform: translate(0);
+  }
 }
 
 /* GALERIA */
@@ -571,10 +596,12 @@ img {
 
 ::-webkit-scrollbar {
   background: transparent;
+  width: 10px;
 }
 ::-webkit-scrollbar-thumb {
   background: lightgray;
   border-radius: 10px;
+  background: #999999;
 }
 
 ::-webkit-scrollbar-corner {
