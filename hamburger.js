@@ -12,7 +12,7 @@ const navSlide = () => {
             body.style.overflowY = 'hidden';
         }
         else{
-            body.style.overflowY = scroll;
+            body.style.overflowY = `scroll`;
         }
         burger.classList.toggle("hamburger-active");
        // burger.classList.toggle("hamburger-animation div");
