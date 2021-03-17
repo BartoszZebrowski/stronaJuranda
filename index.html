@@ -12,11 +12,12 @@
 <body>
 
     <header>
-        <a href="" class="logo"><img src="img/logo.png" alt=""></a>
+        <a href="#scrollStronaglowna" class="logo">Logo</a>
         <ul>
-            <li><a>Home</a></li>
-            <li><a>About</a></li>
-            <li><a>Conctact</a></li>
+            <li><a href="#scrollOferta">Angebot</a></li>
+            <li><a href="#scrollOnas">Über uns</a></li> 
+            <li><a href="#scrollGaleria">Galerie</a></li>
+            <li><a href="#scrollKontakt">Kontakt</a></li>
         </ul>
         <div class="hamburger">
             <div class="line"></div>
@@ -25,7 +26,7 @@
         </div>
     </header>
 
-    <div class="mainPage">
+    <div class="mainPage" id="scrollStronaglowna">
         <div class="slider">
             <div class="slides">
                 <input type="radio" name="radio-btn" id="radio1">
@@ -63,7 +64,7 @@
 
     </div>
 
-    <h2 class="ofertyTytul">Oferta</h2>
+    <h2 class="ofertyTytul" id="scrollOferta">Angebot</h2>
     <section class="oferty">
         <div class="oferta">
             <div class="zdjecieOferty"></div>
@@ -95,20 +96,16 @@
 
     </section>
 
-    <section class="oNas">
+    <section class="oNas" id="scrollOnas">
         <div class="opisONas">
-            <h2>O nas</h2>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit, perspiciatis ipsa! Similique sapiente
-            reprehenderit ipsum ratione ullam? Earum enim repudiandae eaque quod, suscipit natus quae, quasi
-            consequuntur repellat cum ea.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti officiis, unde quo atque sit nisi ea
-            harum. Et totam, repellendus laboriosam, impedit reiciendis accusamus sint voluptatem iusto delectus omnis
-            quasi!
+        <h2>O nas</h2>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit, perspiciatis ipsa! Similique sapiente reprehenderit ipsum ratione ullam? Earum enim repudiandae eaque quod, suscipit natus quae, quasi consequuntur repellat cum ea.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti officiis, unde quo atque sit nisi ea harum. Et totam, repellendus laboriosam, impedit reiciendis accusamus sint voluptatem iusto delectus omnis quasi!
         </div>
         <div class="fotoONas"></div>
     </section>
 
-    <h2 class="galeriaTytul"> Galeria</h2>
+    <h2 class="galeriaTytul" id="scrollGaleria"> Galerie</h2>
     <section class="galeria">
         <div class="fotoGaleria">
             <div class="foto"><img src="img/1.jpg"></div>
@@ -159,7 +156,7 @@
     </section>
 
     <footer>
-        <div class="footerBox">
+        <div class="footerBox" id="scrollKontakt">
             <div class="info">
                 <a class="stopka">
                     Adresse: Behaimring 3, </br></br>23564 Lübeck </br></br>
@@ -175,26 +172,32 @@
             <div class="footerZdjecie">
                 <a href="https://www.facebook.com/Floor-Work-104233651734808" target="_blank" title="Strona Facebook">
                     <img src="img/fb.png" alt="fb">
-                </a>
+                    </a> 
+                    <div class="napisFacebook">
+                        Facebook Seite
+                    </div>
             </div>
         </div>
         <div class="linia">
             <div class="line"></div>
         </div>
         <div class="footerBox">
-            <div class="odsylacz">
-                <a class="menu" href="strona glowna" title="Strona główna">Strona Główna</a>
+            <div class="odsylacz">       
+                <a class="menu" href="#scrollStronaglowna" title="Startseite">Startseite</a>
                 <br><br>
-                <a class="menu" href="kontakt" title="Kontakt">Kontakt</a>
+                <a class="menu" href="#scrollOferta" title="Angebot">Angebot</a>
                 <br><br>
-                <a class="menu" href="galeria" title="Galeria">Galeria</a>
+                <a class="menu" href="#scrollOnas" title="Über uns">Über uns</a>
+                <br><br>
+                <a class="menu" href="#scrollGaleria" title="Galerie">Galerie</a>
             </div>
-        </div>
+        </div>    
     </footer>
 
     <script src="slider.js"></script>
     <script src="oferty.js"></script>
     <script src="hamburger.js"></script>
+    <script src="apperElements.js"></script>
 </body>
 
 </html>

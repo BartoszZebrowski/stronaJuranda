@@ -6,6 +6,10 @@ body {
   overflow: overlay;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 input {
   border: none;
 }
@@ -280,12 +284,15 @@ header .sticky ul li a {
 
 .oferta:nth-child(1) {
   background-image: url(img/1.1.jpg);
+  transition: background 0.6s linear;
 }
 .oferta:nth-child(2) {
   background-image: url(img/1.2.jpg);
+  transition: background 0.6s linear;
 }
 .oferta:nth-child(3) {
   background-image: url(img/ukaladanie.jpeg);
+  transition: background 0.6s linear;
 }
 
 .oferta img {
@@ -317,10 +324,18 @@ header .sticky ul li a {
   opacity: 1;
 }
 
+.oferta-animation{
+  background: rgba(0,0,0,0.7);
+  background-blend-mode: darken ;
+  background-size:cover ;
+
+}
+
 /* O NAS */
 
 .oNas {
-  margin-top: 100px;
+  margin-top: 190px;
+  margin-bottom: 300px;
   width: 100vw;
   height: 60vh;
   display: grid;
@@ -329,6 +344,7 @@ header .sticky ul li a {
   transform: translateY(100px);
   transition: 0.8s linear;
   opacity: 0;
+  
 }
 .oNas-animation {
   opacity: 1;
@@ -336,10 +352,10 @@ header .sticky ul li a {
 }
 
 .opisONas {
-  margin-top: 40px;
+  margin-top: 80px;
   padding: 15px;
   width: 70vw;
-  min-height: 30vh;
+  height: 30vh;
   background-color: white;
   transform: translate(15%, 10%);
   font-size: 18px;
@@ -349,15 +365,16 @@ header .sticky ul li a {
 
 .fotoONas {
   background-image: url("img/miasto.jpg");
-  height: s;
+  height: 70vh;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-@media screen and (max-width: 768px) {
-  .oNas {
+@media screen and (max-width:768px){
+  .oNas{
     width: 100vw;
+    height: 100vh;
     display: flex;
     background-image: url("img/miasto.jpg");
     background-position: center;
@@ -367,11 +384,13 @@ header .sticky ul li a {
     justify-content: center;
     align-items: center;
   }
-  .fotoONas {
+  .fotoONas{
     display: none;
   }
   .opisONas {
+    margin: 0;
     transform: translate(0);
+    font-size: 15px;
   }
 }
 
@@ -618,6 +637,15 @@ footer {
   height: 50px;
   text-align: center;
 }
+
+.napisFacebook{
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  color:#777777;
+  font-size: 12px;
+}
+
 img {
   width: 100%;
   height: 100%;

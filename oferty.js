@@ -7,6 +7,6 @@ box.forEach(element => {
         opis = element.querySelector(".opisOferty")
         tytul.classList.toggle("tytulOferty-animation");
         opis.classList.toggle("opisOferty-animation");
-        console.log("siusiak")
+        element.classList.toggle("oferta-animation");
     });
 });
