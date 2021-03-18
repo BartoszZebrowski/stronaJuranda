@@ -344,11 +344,11 @@ header .sticky ul li a {
 }
 
 .oferta:nth-child(1) {
-  background-image: url(img/1.1.jpg);
+  background-image: url(img/untitled-19.jpg);
   transition: background 0.6s linear;
 }
 .oferta:nth-child(2) {
-  background-image: url(img/1.2.jpg);
+  background-image: url(img/untitled-13.jpg);
   transition: background 0.6s linear;
 }
 .oferta:nth-child(3) {
@@ -510,6 +510,8 @@ header .sticky ul li a {
   display: flex;
   justify-content: center;
   color: white;
+  background-image: url("img/parkiet.png");
+  background-blend-mode: multiply;
 }
 
 .formTytul {
@@ -625,6 +627,7 @@ textarea:focus {
   margin-right: auto;
   margin-top: 50px;
   border-radius: 5px;
+  margin-bottom: 20px;
 }
 
 .wyslij:hover {
