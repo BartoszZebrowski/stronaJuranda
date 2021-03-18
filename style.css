@@ -4,6 +4,7 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
   overflow: overlay;
+  background-color: #eeeeee;
 }
 
 html {
@@ -25,8 +26,57 @@ h2 {
   margin-bottom: 10px;
 }
 
+h1 {
+  font-size: 48px;
+}
+
 a {
   text-decoration: none;
+}
+
+/* Napis na sliderze */
+
+.sliderNapis {
+  position: absolute;
+  top: 40vh;
+  left: 6vw;
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+  height: 30vh;
+  width: 88vw;
+}
+
+@media all and (max-width: 1400px) {
+  .sliderNapis {
+    left: calc(50% - 400px);
+  }
+}
+
+@media all and (max-width: 840px) {
+  .sliderNapis {
+    left: calc(50% - 300px);
+  }
+}
+
+@media all and (max-width: 640px) {
+  .sliderNapis {
+    left: calc(50% - 200px);
+  }
+}
+
+@media all and (max-width: 480px) {
+  .sliderNapis {
+    left: calc(50% - 150px);
+    top: 30vh;
+  }
+}
+
+.zadzwonTeraz {
+  position: absolute;
+  left: calc(50% - 75px);
+  bottom: 25vh;
+  font-size: 30px;
 }
 
 /* SLIDER */
@@ -55,8 +105,16 @@ a {
 
 .slide img {
   width: 100vw;
-  height: 91vh;
+  height: auto;
 }
+
+@media all and (max-width: 1400px) {
+  .slide img {
+    width: 200vh;
+    height: auto;
+  }
+}
+
 .navigation-manual {
   position: absolute;
   width: 100vw;
@@ -66,7 +124,7 @@ a {
 }
 .manual-btn {
   border: 2px solid white;
-  padding: 12px;
+  padding: 6px;
   border-radius: 20px;
   cursor: pointer;
   transition: 1s;
@@ -97,7 +155,7 @@ a {
 }
 .navigation-auto div {
   border: 2px solid white;
-  padding: 12px;
+  padding: 6px;
   border-radius: 20px;
   transition: 1s;
 }
@@ -128,8 +186,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 10px;
-  padding: 40px 100px;
+  padding: 20px 50px;
   z-index: 100000;
 }
 header .logo {
@@ -169,6 +226,7 @@ header ul li a {
   padding: 5px 100px;
   background: #282828;
   position: fixed;
+  padding: 5px 20px;
 }
 header .sticky ul li a {
   color: black;
@@ -195,9 +253,6 @@ header .sticky ul li a {
   transition: transform 0.2s 0.2s ease-in-out;
 }
 @media screen and (max-width: 768px) {
-  body {
-    /*overflow-x: hidden;*/
-  }
   header ul {
     position: absolute;
     left: 0;
@@ -324,27 +379,30 @@ header .sticky ul li a {
   opacity: 1;
 }
 
-.oferta-animation{
-  background: rgba(0,0,0,0.7);
-  background-blend-mode: darken ;
-  background-size:cover ;
-
+.oferta-animation {
+  background: rgba(0, 0, 0, 0.7);
+  background-blend-mode: darken;
+  background-size: cover;
 }
 
 /* O NAS */
 
 .oNas {
   margin-top: 190px;
-  margin-bottom: 300px;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
   height: 60vh;
-  display: grid;
-  grid-template-columns: 50% 50%;
-
   transform: translateY(100px);
   transition: 0.8s linear;
   opacity: 0;
-  
+  background-image: url("img/miasto.jpg");
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .oNas-animation {
   opacity: 1;
@@ -352,27 +410,17 @@ header .sticky ul li a {
 }
 
 .opisONas {
-  margin-top: 80px;
   padding: 15px;
   width: 70vw;
   height: 30vh;
   background-color: white;
-  transform: translate(15%, 10%);
   font-size: 18px;
   -webkit-box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.58);
   box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.58);
 }
 
-.fotoONas {
-  background-image: url("img/miasto.jpg");
-  height: 70vh;
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-@media screen and (max-width:768px){
-  .oNas{
+@media screen and (max-width: 768px) {
+  .oNas {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -384,7 +432,7 @@ header .sticky ul li a {
     justify-content: center;
     align-items: center;
   }
-  .fotoONas{
+  .fotoONas {
     display: none;
   }
   .opisONas {
@@ -409,7 +457,6 @@ header .sticky ul li a {
   text-align: center;
   width: 100vw;
   justify-content: center;
-
 }
 
 .fotoGaleria {
@@ -424,6 +471,12 @@ header .sticky ul li a {
   height: 300px;
   background-color: blue;
   margin: 4px;
+  opacity: 0;
+  transition: 1s;
+}
+
+.fotoAnimation {
+  opacity: 1;
 }
 
 @media all and (max-width: 800px) {
@@ -431,17 +484,14 @@ header .sticky ul li a {
     width: 100%;
   }
 
-  .foto{
+  .foto {
     width: 100vw;
     height: 100vw;
   }
-
-
 }
 
 /* FORMULARZ KONTAKTOWY */
 .conctact {
-  background-image: url("img/tlo3.png");
   background-color: #282828;
   width: 100vw;
   display: flex;
@@ -449,13 +499,12 @@ header .sticky ul li a {
   color: white;
 }
 
-.formTytul{
+.formTytul {
   width: 100%;
   text-align: center;
   grid-column-start: 1;
   grid-column-end: span 2;
 }
-
 
 .form {
   margin: 100px;
@@ -478,7 +527,7 @@ header .sticky ul li a {
   width: 90%;
 }
 
-.formForm form{
+.formForm form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -533,41 +582,40 @@ textarea:focus {
 
 .telButton {
   background-color: #00e0ff;
+  border: none;
   width: 150px;
   height: 50px;
-  border: none;
   color: white;
   font-size: 70%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
+  border-radius: 5px;
 }
 
+.telButton:hover {
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.41);
+}
 .telButton a {
   color: white;
   text-decoration: none;
 }
 
 .wyslij {
-  color: #fff;
-  width: 30%;
-  height: 40px;
-  color: #282828;
-  font-size: 30px;
-  border-bottom: #fff 2px solid;
-  background-color: #595959;
+  background-color: #00e0ff;
+  border: none;
+  width: 150px;
+  height: 50px;
+  color: white;
+  font-size: 20px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 50px;
+  border-radius: 5px;
 }
 
-.wyslij::after {
-  content: "";
-  height: 3px;
-  width: 100%;
-  background: red;
-  position: absolute;
-  left: 0;
-  bottom: 0;
+.wyslij:hover {
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.41);
 }
 
 @media all and (max-width: 1300px) {
@@ -594,7 +642,7 @@ textarea:focus {
     width: 90%;
   }
 
-  .formForm form{
+  .formForm form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -623,7 +671,7 @@ footer {
   width: 20%;
   text-align: center;
 }
-.line {
+.lineFotter {
   align-items: center;
   height: 100%;
   border-left: 2px solid #444444;
@@ -638,11 +686,11 @@ footer {
   text-align: center;
 }
 
-.napisFacebook{
+.napisFacebook {
   align-items: center;
   width: 50px;
   height: 50px;
-  color:#777777;
+  color: #777777;
   font-size: 12px;
 }
 

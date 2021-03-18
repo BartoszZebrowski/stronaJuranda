@@ -1,9 +1,15 @@
+const nav = document.querySelector("header ul");
+const lines = document.querySelectorAll("line");
+const burger = document.querySelector(".hamburger");
+const body = document.querySelector("body");
+
 const navSlide = () => {
-    const lines = document.querySelectorAll("line");
-    const burger = document.querySelector(".hamburger");
-    const nav = document.querySelector("header ul");
-    const body = document.querySelector("body");
+    //const lines = document.querySelectorAll("line");
+    //const burger = document.querySelector(".hamburger");
+    //const nav = document.querySelector("header ul");
+    //const body = document.querySelector("body");
     console.log(nav);
+    body.style.overflowX = hidden;
 
     burger.addEventListener('click', ()=>{
         nav.classList.toggle('nav-active');
@@ -12,7 +18,8 @@ const navSlide = () => {
             body.style.overflowY = 'hidden';
         }
         else{
-            body.style.overflowY = `scroll`;
+            body.style.overflowY = scroll;
+            
         }
         burger.classList.toggle("hamburger-active");
        // burger.classList.toggle("hamburger-animation div");
@@ -20,3 +27,20 @@ const navSlide = () => {
     })
 }
 navSlide();
+
+const navLink = document.querySelectorAll("header ul li");
+console.log(navLink);
+navLink.forEach(li =>{
+    
+        li.addEventListener('click', ()=>{
+            nav.classList.remove('nav-active');
+            console.log('dupa');
+            
+            if(document.querySelector('.hamburger-active')){
+                burger.classList.remove("hamburger-active");
+                body.style.overflowY = 'scroll';
+            }
+
+
+        })
+})
