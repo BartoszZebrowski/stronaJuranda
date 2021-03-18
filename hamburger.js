@@ -9,7 +9,7 @@ const navSlide = () => {
     //const nav = document.querySelector("header ul");
     //const body = document.querySelector("body");
     console.log(nav);
-    body.style.overflowX = hidden;
+    body.style.overflowX = `hidden`;
 
     burger.addEventListener('click', ()=>{
         nav.classList.toggle('nav-active');
@@ -18,7 +18,7 @@ const navSlide = () => {
             body.style.overflowY = 'hidden';
         }
         else{
-            body.style.overflowY = scroll;
+            body.style.overflowY = `scroll`;
             
         }
         burger.classList.toggle("hamburger-active");

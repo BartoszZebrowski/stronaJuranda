@@ -276,11 +276,16 @@ header .sticky ul li a {
   }
 }
 .nav-active {
-  transform: translateX(0%);
+  transform: translateX(-4%);
+}
+
+@media screen and (max-width: 450px) {
+  .nav-active {
+    transform: translateX(-8.5%);
+  }
 }
 .hamburger-active {
-  position: absolute;
-  right: 6.2rem;
+  position: relative;
 }
 .hamburger-active .line:nth-child(2) {
   background-color: transparent;
@@ -457,6 +462,7 @@ header .sticky ul li a {
   text-align: center;
   width: 100vw;
   justify-content: center;
+  margin-bottom: 4px;
 }
 
 .fotoGaleria {
