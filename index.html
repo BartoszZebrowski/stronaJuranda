@@ -196,31 +196,6 @@
                 <a class="menu" href="#scrollOnas" title="Über uns">Über uns</a>
                 <br><br>
                 <a class="menu" href="#scrollGaleria" title="Galerie">Galerie</a>
-                <?php
-                $email = $_POST['email'];
-                $telnr = $_POST['telnr'];
-                $imie = $_POST['imie'];
-                $tekst = $_POST['tekst'];
-
-                if ($tekst == "") {
-                    echo "Nie wpisałeś żadnego tekstu wiadomości";
-                }
-
-                $message = "Imie i nazwisko:" . $imie . " " . $tekst;
-
-                $header = "From:" . $email . "\nContent-Type:" .
-                    ' text/plain;charset="UTF-8"' .
-                    "\nContent-Transfer-Encoding: 8bit";
-
-                if (filter_var($email, FILTER_SANITIZE_EMAIL)); {
-                    if (mail("b.zebrowski@wp.pl", $imie, $message)) {
-                        echo "Poprawnie wysłano wiadomość";
-                    } else {
-                        echo "Wystąpił nieoczekiwany błąd, spróbuj jeszcze raz";
-                    }
-                }
-                ?>
-
             </div>
         </div>
     </footer>
@@ -229,6 +204,7 @@
     <script src="js/oferty.js"></script>
     <script src="js/hamburger.js"></script>
     <script src="js/apperElements.js"></script>
+    <script src="js/arka.js"></script>
 </body>
 
 </html>

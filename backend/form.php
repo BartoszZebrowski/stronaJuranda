@@ -1,27 +1,21 @@
-<?
+<?php
+
 $email = $_POST['email'];
 $telnr = $_POST['telnr'];
 $imie = $_POST['imie'];
 $tekst = $_POST['tekst'];
 
-if($tekst == "")
-{
-    echo "Nie wpisałeś żadnego tekstu wiadomości"
-}
+$head =
+    "MIME-Version: 1.0\r\n" .
+    "Content-Type: text/plain; charset=$charset\r\n" .
+    "Content-Transfer-Encoding: 8bit";
 
-$message = "Imie i nazwisko:".$imie." ".$tekst  
+$od = "\nFrom: test@jurand.cba.pl";
+$email = 'test@jurand.cba.pl';
+$subject = 'temat';
+$message = 'Dziękujemy za wysłanie formularza';
+$error = 'Wystąpił błąd podczas wysyłania formularza';
+$charset = 'iso-8859-2';
+$body = '';
 
-$header = "From:".$email."\nContent-Type:".
-' text/plain;charset="UTF-8"'.
-"\nContent-Transfer-Encoding: 8bit";
-
-if(filter_var($email, FILTER_SANITIZE_EMAIL));
-{
-    if(mail("b.zebrowski@wp.pl", $imie , $message))
-    {
-        echo "Poprawnie wysłano wiadomość"
-    }else{
-        echo "Wystąpił nieoczekiwany błąd, spróbuj jeszcze raz"
-    }
-
-}
+echo mail($email, $subject, $body, $head, $od) ? $message : $error;
