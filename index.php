@@ -16,7 +16,7 @@
         <a href="#scrollStronaglowna" class="logo"><img src="img/logo.png" alt="Logo"></a>
         <ul>
             <li><a href="#scrollOferta">Angebot</a></li>
-            <li><a href="#scrollOnas">Über uns</a></li> 
+            <li><a href="#scrollOnas">Über uns</a></li>
             <li><a href="#scrollGaleria">Galerie</a></li>
             <li><a href="#scrollKontakt">Kontakt</a></li>
         </ul>
@@ -29,7 +29,9 @@
 
     <div class="mainPage" id="scrollStronaglowna">
         <div class="slider">
-            <div class="sliderNapis"><h1>Układamy podłogi na karzdą okazję</h1></div>
+            <div class="sliderNapis">
+                <h1>Układamy podłogi na karzdą okazję</h1>
+            </div>
             <div class="zadzwonTeraz"><button class="telButton"><a href="tel:694673100">Zadzwoń</a></button></div>
 
             <div class="slides">
@@ -102,7 +104,7 @@
 
     <section class="oNas" id="scrollOnas">
         <div class="opisONas">
-        <h2>O nas</h2>
+            <h2>O nas</h2>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit, perspiciatis ipsa! Similique sapiente reprehenderit ipsum ratione ullam? Earum enim repudiandae eaque quod, suscipit natus quae, quasi consequuntur repellat cum ea.
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti officiis, unde quo atque sit nisi ea harum. Et totam, repellendus laboriosam, impedit reiciendis accusamus sint voluptatem iusto delectus omnis quasi!
         </div>
@@ -136,11 +138,11 @@
 
 
     <section class="conctact">
-        
+
         <div class="form">
             <h2 class="formTytul">Kontakt</h2>
             <div class="formTel">
-                Jeśli sie chcesz skontaktować to zadzwoń pod<br><br> 
+                Jeśli sie chcesz skontaktować to zadzwoń pod<br><br>
                 <x style="color: #00e0ff;">000-000-000</x> <br>
                 Lub
                 <button class="telButton"><a href="tel:694673100">Zadzwoń</a></button>
@@ -176,17 +178,17 @@
             <div class="footerZdjecie">
                 <a href="https://www.facebook.com/Floor-Work-104233651734808" target="_blank" title="Strona Facebook">
                     <img src="img/fb.png" alt="fb">
-                    </a> 
-                    <div class="napisFacebook">
-                        Facebook Seite
-                    </div>
+                </a>
+                <div class="napisFacebook">
+                    Facebook Seite
+                </div>
             </div>
         </div>
         <div class="linia">
             <div class="lineFotter"></div>
         </div>
         <div class="footerBox">
-            <div class="odsylacz">       
+            <div class="odsylacz">
                 <a class="menu" href="#scrollStronaglowna" title="Startseite">Startseite</a>
                 <br><br>
                 <a class="menu" href="#scrollOferta" title="Angebot">Angebot</a>
@@ -194,8 +196,33 @@
                 <a class="menu" href="#scrollOnas" title="Über uns">Über uns</a>
                 <br><br>
                 <a class="menu" href="#scrollGaleria" title="Galerie">Galerie</a>
+                <?php
+                $email = $_POST['email'];
+                $telnr = $_POST['telnr'];
+                $imie = $_POST['imie'];
+                $tekst = $_POST['tekst'];
+
+                if ($tekst == "") {
+                    echo "Nie wpisałeś żadnego tekstu wiadomości";
+                }
+
+                $message = "Imie i nazwisko:" . $imie . " " . $tekst;
+
+                $header = "From:" . $email . "\nContent-Type:" .
+                    ' text/plain;charset="UTF-8"' .
+                    "\nContent-Transfer-Encoding: 8bit";
+
+                if (filter_var($email, FILTER_SANITIZE_EMAIL)); {
+                    if (mail("b.zebrowski@wp.pl", $imie, $message)) {
+                        echo "Poprawnie wysłano wiadomość";
+                    } else {
+                        echo "Wystąpił nieoczekiwany błąd, spróbuj jeszcze raz";
+                    }
+                }
+                ?>
+
             </div>
-        </div>    
+        </div>
     </footer>
 
     <script src="js/slider.js"></script>
