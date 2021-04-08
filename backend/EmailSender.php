@@ -14,8 +14,8 @@ function EmailSender($email, $telnr, $imie, $tekst)
     // Konfiguracja PHP Mailera
     $mail->isSMTP();
     $mail->Host = "smtp.gmail.com";
-    $mail->Username = "polskigibon15@gmail.com";
-    $mail->Password = "Klamka1212";
+    $mail->Username = ""; // twoj mail
+    $mail->Password = ""; // haslo do twojego maila
     $mail->SMTPAuth = "true";
     $mail->SMTPSecure = "ssl";
     $mail->Port = "465";

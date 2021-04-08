@@ -3,13 +3,14 @@
 
 function addDataBase($email, $telnr, $imie, $tekst)
 {
-    $host = "localhost";
+    $host = "127.0.0.1";
     $user = "root";
     $password = "";
     $database = "stronajuranda";
     $time = date('Y-m-d H:i:s');
 
-    $query = "INSERT INTO emails (name, message, email, telnumber, data) VALUES ($imie, $tekst, $email, $telnr, $time)";
+
+    $query = 'INSERT INTO emails (name, message, email, telnumber,data) VALUES ("' . $imie . '", "' . $tekst . '", "' . $email . '", "' . $telnr . '","' . $time . '")';
     $connect =  mysqli_connect($host, $user, $password, $database);
     print mysqli_error($connect);
     if (mysqli_query($connect, $query)) {

@@ -156,7 +156,6 @@
                     <textarea id="" cols="30" rows="10" name="tekst" placeholder="Tekst wiadomości"></textarea>
 
                     <?php
-
                     require "backend/EmailSender.php";
                     require "backend/AddDataBase.php";
 
@@ -166,14 +165,13 @@
                         $telnr = $_POST['telnr'];
                         $imie = $_POST['imie'];
                         $tekst = $_POST['tekst'];
-                        print(addDataBase($email, $telnr, $imie, $tekst) ? "Wprowadzono do bazy" : " Nie wprowadzono do bazy");
+                        print(addDataBase($email, $telnr, $imie, $tekst));
                         print(EmailSender($email, $telnr, $imie, $tekst) ? "\nWysłano wiadomość" : "\nWystąpił nieoczekiwany błąd");
                     } else {
                         print("Wszystkie pola muszą być wypełnione");
                     }
 
                     ?>
-
 
                     <input type="submit" class="wyslij" value="Wyslij">
                 </form>
