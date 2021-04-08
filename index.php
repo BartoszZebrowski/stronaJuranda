@@ -166,7 +166,8 @@
                         $telnr = $_POST['telnr'];
                         $imie = $_POST['imie'];
                         $tekst = $_POST['tekst'];
-                        print(EmailSender($email, $telnr, $imie, $tekst) ? "Wysłano wiadomość" : "Wystąpił nieoczekiwany błąd");
+                        print(addDataBase($email, $telnr, $imie, $tekst) ? "Wprowadzono do bazy" : " Nie wprowadzono do bazy");
+                        print(EmailSender($email, $telnr, $imie, $tekst) ? "\nWysłano wiadomość" : "\nWystąpił nieoczekiwany błąd");
                     } else {
                         print("Wszystkie pola muszą być wypełnione");
                     }
