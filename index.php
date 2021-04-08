@@ -142,20 +142,40 @@
         <div class="form">
             <h2 class="formTytul">Kontakt</h2>
             <div class="formTel">
-                Jeśli sie chcesz skontaktować to zadzwoń pod<br><br>
+                Jeśli chcesz się skontaktować to zadzwoń pod<br><br>
                 <x style="color: #00e0ff;">000-000-000</x> <br>
                 Lub
                 <button class="telButton"><a href="tel:694673100">Zadzwoń</a></button>
             </div>
 
             <div class="formForm">
-                <form action="form.php" method="POST">
+                <form action="" method="POST">
                     <input class="inputText" type="text" name="imie" placeholder="Imię i nazwisko">
                     <input class="inputText" type="text" name="email" placeholder="E-mail">
                     <input class="inputText" type="text" name="telnr" placeholder="Numer Telefonu">
                     <textarea id="" cols="30" rows="10" name="tekst" placeholder="Tekst wiadomości"></textarea>
+
+                    <?php
+
+                    require "backend/EmailSender.php";
+
+                    if (isset($_POST['email']) && isset($_POST['telnr']) && isset($_POST['imie']) && isset($_POST['tekst']) && filter_var($_POST['email'], FILTER_SANITIZE_EMAIL)) {
+                        $email = $_POST['email'];
+                        $telnr = $_POST['telnr'];
+                        $imie = $_POST['imie'];
+                        $tekst = $_POST['tekst'];
+                        print(EmailSender($email, $telnr, $imie, $tekst) ? "Wysłano wiadomość" : "Wystąpił nieoczekiwany błąd");
+                    } else {
+                        print("Wszystkie pola muszą być wypełnione");
+                    }
+
+                    ?>
+
+
                     <input type="submit" class="wyslij" value="Wyslij">
                 </form>
+
+
 
             </div>
         </div>
