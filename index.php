@@ -158,6 +158,8 @@
                     <?php
 
                     require "backend/EmailSender.php";
+                    require "backend/AddDataBase.php";
+
 
                     if (isset($_POST['email']) && isset($_POST['telnr']) && isset($_POST['imie']) && isset($_POST['tekst']) && filter_var($_POST['email'], FILTER_SANITIZE_EMAIL)) {
                         $email = $_POST['email'];
